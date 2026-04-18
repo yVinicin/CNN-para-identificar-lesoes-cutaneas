@@ -1,0 +1,11 @@
+{
+    "dropout_rate": 0.1,
+    "l2_reg": 0.0001,
+    "num_filtros_conv1": 16,
+    "num_filtros_conv2": 32,
+    "num_filtros_conv3": 64,
+    "num_filtros_conv4": 128,
+    "num_neuronios_dense1": 64,
+    "num_neuronios_dense2": 32,
+    "optimizer": "adam"
+}

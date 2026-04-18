@@ -1,0 +1,10 @@
+streamlit
+numpy
+pillow
+pandas
+tensorflow
+scikit-learn
+imbalanced-learn
+tqdm
+matplotlib
+seaborn

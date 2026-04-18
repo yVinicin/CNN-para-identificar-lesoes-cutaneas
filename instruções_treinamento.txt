@@ -1,0 +1,58 @@
+Guia Rápido para Treinamento da Rede Neural
+
+Olá! Este guia vai te ajudar a treinar o nosso modelo de classificação de lesões de pele. 
+Siga os passos abaixo para preparar o ambiente e executar o treinamento.
+
+Passo 1: Preparando o Ambiente
+Antes de tudo, precisamos garantir que seu computador tenha todas as "ferramentas" necessárias.
+
+1.  Instale as Bibliotecas:
+    Temos um arquivo chamado "requirements.txt" que lista tudo o que o projeto precisa. Para instalar tudo de uma vez, abra o terminal na pasta do projeto e rode o comando:
+    """bash
+    pip install -r requirements.txt
+    """
+
+2.  Verifique o Conjunto de Dados:
+    O nosso modelo aprende a partir de um arquivo de dados chamado "hmnist_28_28_RGB.csv". 
+    Por padrão, o código espera que este arquivo esteja na mesma pasta do script. 
+    Se você salvou o arquivo em outro lugar, não tem problema! 
+    Basta abrir o arquivo "modelo.py" e ajustar o caminho na linha que diz "caminho_arquivo = "...".
+
+3.  Requisitos do Sistema:
+    Nosso projeto foi feito com Python e TensorFlow.
+    É importante ter essas versões (ou mais recentes) para tudo funcionar direitinho.
+
+Passo 2: Executando o Treinamento
+O processo de treinamento é dividido em duas partes: a busca pelos melhores hiperparâmetros e o treinamento do modelo final.
+
+Parte 1: Buscar os Melhores Hiperparâmetros (Opcional, mas recomendado)
+
+Este passo executa um script que testa várias combinações de configurações para a rede neural e encontra a que gera o melhor resultado.
+
+1.  No terminal, na pasta do projeto, execute o script "busca.py":
+    """bash
+    python busca.py
+    """
+2.  Aguarde a conclusão. Este processo pode ser demorado. Ao final, ele criará um arquivo chamado "melhores_hiperparametros.txt" com a configuração ideal encontrada.
+
+Parte 2: Treinar o Modelo Final
+
+Agora, vamos usar os melhores hiperparâmetros para treinar o modelo que será usado no aplicativo.
+
+1.  Abra os arquivos: Abra o "melhores_hiperparametros.txt" e o script "modelo.py".
+2.  No "modelo.py", localize a seção "8. Função para criar o modelo". Escreva Manualmente no "criar_modelo" e nas camadas densas.
+3.  Execute o treinamento final: Com os parâmetros atualizados, rode o script "modelo.py" no terminal:
+    """bash
+    python modelo.py
+    """
+
+Ao final, o script salvará o modelo treinado ("meu_modelo_melhorado.h5"), um JSON com todas as informações ("informacoes_modelo_melhorado.json") e os gráficos de avaliação.
+
+Informações Adicionais
+   Link da base de dados: https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000
+   Hiperparâmetros Otimizados: O processo de busca ("busca.py") é fundamental para encontrar a arquitetura de rede mais eficiente. O treinamento final ("modelo.py") utiliza esses resultados para garantir a melhor performance.
+   Divisão dos Dados: Para garantir uma avaliação justa, os dados são divididos da seguinte forma: 80% para treino, 10% para validação (ajustes durante o treino) e 10% para teste (a prova final do modelo).
+---
+Aviso Importante: Este modelo é um projeto acadêmico e uma ferramenta de estudo. Ele não substitui de forma alguma o diagnóstico realizado por um médico dermatologista qualificado.
+
+Se tiver qualquer dúvida, o código "modelo.py" está comentado para ajudar a entender cada parte do processo. Bom treinamento!

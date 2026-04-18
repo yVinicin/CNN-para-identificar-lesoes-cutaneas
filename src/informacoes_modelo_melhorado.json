@@ -1,0 +1,178 @@
+{
+    "melhores_hiperparametros": {
+        "dropout_rate": 0.1,
+        "optimizer": "adam",
+        "l2_reg": 0.0001,
+        "num_filtros_conv1": 16,
+        "num_filtros_conv2": 32,
+        "num_filtros_conv3": 64,
+        "num_filtros_conv4": 128,
+        "num_neuronios_dense1": 64,
+        "num_neuronios_dense2": 32
+    },
+    "pesos_classe": {
+        "0": 0.9977678571428571,
+        "1": 1.0020549224733795,
+        "2": 0.9946226590024105,
+        "3": 0.9898505259272928,
+        "4": 0.9964703696823333,
+        "5": 1.0054358013120899,
+        "6": 1.0141803743618831
+    },
+    "acuracia_teste": 0.8570515513420105,
+    "acuracia_validacao_final": 0.8668228983879089,
+    "f1_macro": 0.8558876320067791,
+    "roc_auc": 0.9835869174415083,
+    "matriz_confusao": [
+        [
+            634,
+            22,
+            8,
+            0,
+            0,
+            0,
+            2
+        ],
+        [
+            66,
+            584,
+            16,
+            8,
+            0,
+            0,
+            1
+        ],
+        [
+            51,
+            29,
+            473,
+            0,
+            23,
+            3,
+            89
+        ],
+        [
+            0,
+            0,
+            0,
+            669,
+            0,
+            0,
+            0
+        ],
+        [
+            13,
+            10,
+            44,
+            4,
+            464,
+            6,
+            111
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0,
+            667,
+            0
+        ],
+        [
+            30,
+            8,
+            76,
+            0,
+            48,
+            3,
+            532
+        ]
+    ],
+    "relatorio_classificacao": {
+        "akiec": {
+            "precision": 0.7984886649874056,
+            "recall": 0.9519519519519519,
+            "f1-score": 0.8684931506849315,
+            "support": 666.0
+        },
+        "bcc": {
+            "precision": 0.8943338437978561,
+            "recall": 0.8651851851851852,
+            "f1-score": 0.8795180722891566,
+            "support": 675.0
+        },
+        "bkl": {
+            "precision": 0.766612641815235,
+            "recall": 0.7080838323353293,
+            "f1-score": 0.7361867704280156,
+            "support": 668.0
+        },
+        "df": {
+            "precision": 0.9823788546255506,
+            "recall": 1.0,
+            "f1-score": 0.9911111111111112,
+            "support": 669.0
+        },
+        "nv": {
+            "precision": 0.8672897196261682,
+            "recall": 0.7116564417177914,
+            "f1-score": 0.7818028643639428,
+            "support": 652.0
+        },
+        "vasc": {
+            "precision": 0.9823269513991163,
+            "recall": 1.0,
+            "f1-score": 0.9910846953937593,
+            "support": 667.0
+        },
+        "mel": {
+            "precision": 0.7238095238095238,
+            "recall": 0.763271162123386,
+            "f1-score": 0.7430167597765364,
+            "support": 697.0
+        },
+        "accuracy": 0.8570515551768215,
+        "macro avg": {
+            "precision": 0.8593200285801222,
+            "recall": 0.8571640819019491,
+            "f1-score": 0.8558876320067791,
+            "support": 4694.0
+        },
+        "weighted avg": {
+            "precision": 0.8585338103529923,
+            "recall": 0.8570515551768215,
+            "f1-score": 0.8554727043220637,
+            "support": 4694.0
+        }
+    },
+    "mapeamento_classes": {
+        "0": {
+            "curto": "akiec",
+            "completo": "Ceratoses Act\u00ednicas e Carcinoma Intraepitelial"
+        },
+        "1": {
+            "curto": "bcc",
+            "completo": "Carcinoma Basocelular"
+        },
+        "2": {
+            "curto": "bkl",
+            "completo": "Les\u00f5es Benignas Semelhantes a Ceratose"
+        },
+        "3": {
+            "curto": "df",
+            "completo": "Dermatofibroma"
+        },
+        "4": {
+            "curto": "nv",
+            "completo": "Nevos Melanoc\u00edticos"
+        },
+        "5": {
+            "curto": "vasc",
+            "completo": "Les\u00f5es Vasculares (Granulomas e Hemorragia)"
+        },
+        "6": {
+            "curto": "mel",
+            "completo": "Melanoma"
+        }
+    }
+}
